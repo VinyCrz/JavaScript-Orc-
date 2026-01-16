@@ -21,18 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     xpEl.textContent = hero.xp;
   }
 
-  function ganharXp(valor) {
-    hero.xp += valor;
-
-    if (hero.xp >= xpPorNivel) {
-      hero.xp -= xpPorNivel;
-      hero.nivel++;
-      alert("🎉 Parabéns! Você subiu de nível!");
-    }
-
-    atualizarPainel();
-  }
-
   const painelHeroi = document.getElementById("painel-heroi");
 
   painelHeroi.addEventListener("click", () => {
@@ -46,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const nome = document.getElementById("nome").value;
 
-    alert(`Obrigado pela mensagem, ${nome}! 🚀`);
+    alert(`Obrigado pela mensagem, ${nome}!`);
     formContato.reset();
 
     ganharXp(100);
